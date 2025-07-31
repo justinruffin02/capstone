@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us | Tuff Stuff Moving{% endblock %}
+
+{% block css %}
+<link href="{% static 'css/home.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="main-layout">
+  <div class="main-left">
+    <section class="about-section fade-in">
+      <h2>🏋️‍♂️ About Tuff Stuff Moving</h2>
+      <p>
+        Founded in 2025 by <strong>Justin Ruffin</strong>, Tuff Stuff Moving was built on the principles of strength, service, and military precision. We're proud to serve the Dallas–Fort Worth area and beyond.
+      </p>
+      <p>
+        Our mission is to provide strong, reliable, and careful moving services to individuals, families, and businesses. With a team trained in careful packing, strategic lifting, and logistical planning, we treat your stuff like it's our own.
+      </p>
+      <p>🎓 Powered by San Diego Global Knowledge University.</p>
+    </section>
+
+    <section class="about-section fade-in">
+      <h2>💼 Why Choose Us?</h2>
+      <ul class="services-list">
+        <li>✅ Military-grade efficiency</li>
+        <li>✅ Local & long-distance coverage</li>
+        <li>✅ Competitive pricing with no hidden fees</li>
+        <li>✅ Friendly, professional movers</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="main-right fade-in">
+    <div class="testimonial-box">
+      <h3>💬 What Customers Say</h3>
+      <p id="testimonial-quote">Loading feedback...</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/testimonials.js' %}"></script>
+<script src="{% static 'js/scroll-animations.js' %}"></script>
+{% endblock %}

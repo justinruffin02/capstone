@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Services | Tuff Stuff Moving{% endblock %}
+
+{% block css %}
+<link href="{% static 'css/home.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="main-layout">
+  <div class="main-left">
+    <section class="services-section fade-in">
+      <h2>🏠 Residential Moves</h2>
+      <p>From apartments to multi-story homes, we move families with care, strength, and precision.</p>
+    </section>
+
+    <section class="services-section fade-in">
+      <h2>🏢 Office Relocations</h2>
+      <p>Minimal downtime, secure file transport, and clean transitions for small businesses and large offices.</p>
+    </section>
+
+    <section class="services-section fade-in">
+      <h2>📦 Packing & Unpacking</h2>
+      <p>We offer full or partial packing services, using premium materials to protect your belongings.</p>
+    </section>
+
+    <section class="services-section fade-in">
+      <h2>🚛 Long-Distance Moves</h2>
+      <p>Moving across Texas or the country? We handle the logistics and heavy lifting coast to coast.</p>
+    </section>
+
+    <section class="services-section fade-in">
+      <h2>📍 Local Moves (DFW)</h2>
+      <p>Fast, affordable service within the Dallas–Fort Worth metroplex with same-day availability.</p>
+    </section>
+
+    <section class="services-section fade-in">
+      <h2>🛠 Furniture Assembly</h2>
+      <p>From IKEA to custom pieces, our team assembles beds, tables, desks, and more on-site.</p>
+    </section>
+
+    <section class="services-section fade-in">
+      <h2>❓ FAQs</h2>
+      <ul class="services-list">
+        <li>📅 <strong>How early should I book?</strong> – We recommend 1–2 weeks in advance for best availability.</li>
+        <li>💳 <strong>Do you accept cards?</strong> – Yes, we accept all major credit/debit cards and digital payments.</li>
+        <li>📦 <strong>Do you provide packing supplies?</strong> – Yes, including boxes, tape, bubble wrap, and blankets.</li>
+        <li>👷 <strong>Are your movers trained?</strong> – Absolutely! Our movers are experienced and background-checked.</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="main-right fade-in">
+    <div class="testimonial-box">
+      <h3>💬 Client Testimonials</h3>
+      <p id="testimonial-quote">Loading feedback...</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/testimonials.js' %}"></script>
+<script src="{% static 'js/scroll-animations.js' %}"></script>
+{% endblock %}

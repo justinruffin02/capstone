@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Welcome to Tuff Stuff Moving{% endblock %}
+
+{% block css %}
+<link href="{% static 'css/home.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block banner %}
+<div class="hero-banner-only"></div>
+{% endblock %}
+
+{% block content %}
+<div class="main-layout">
+  <div class="main-left">
+    <div class="home-hero-text fade-in">
+      <h1 class="home-header">Tuff Stuff Moving</h1>
+      <p class="home-intro">
+        Your trusted local and long-distance moving experts. We handle your stuff like it’s our own — strong, reliable, and careful every step of the way.
+      </p>
+      <a href="#contact" class="home-button">Get a Free Quote</a>
+    </div>
+
+    <section class="">
+      <h2>🛠 Our Services</h2>
+
+      <div class="cards-container">
+        <a href="/services/" class="card-container">
+          <div>🏠</div>
+          <h2>Residential Moves</h2>
+          <p>From apartments to multi-story homes, we move families with care, strength, and precision.</p>
+        </a>
+
+        <a href="/services/" class="card-container">
+          <div>🏢</div>
+          <h2>Office Relocations</h2>
+          <p>Minimal downtime, secure file transport, and clean transitions for small businesses and large offices.</p>
+        </a>
+
+        <a href="/services/" class="card-container">
+          <div>📦</div>
+          <h2>Packing & Unpacking</h2>
+          <p>We offer full or partial packing services, using premium materials to protect your belongings.</p>
+        </a>
+
+          <a href="/services/" class="card-container">
+          <div>🚛</div>
+          <h2>Long-Distance Moving</h2>
+          <p>Moving across Texas or the country? We handle the logistics and heavy lifting coast to coast.</p>
+        </a>
+
+        <a href="/services/" class="card-container">
+          <div>📍</div>
+          <h2>Local Moves in DFW Area</h2>
+          <p>Fast, affordable service within the Dallas–Fort Worth metroplex with same-day availability.</p>
+        </a>
+
+        <a href="/services/" class="card-container">
+          <div>🛠</div>
+          <h2>Furniture Assembly</h2>
+          <p>From IKEA to custom pieces, our team assembles beds, tables, desks, and more on-site.</p>
+        </a>
+
+        
+      </div>
+    </section>
+
+    <section class="about-section fade-in">
+      <h2>📘 About Us</h2>
+      <p>
+        Tuff Stuff Moving is a Texas-born moving company founded on strength, precision, and service. We bring the discipline of military standards into every move, ensuring smart, safe, and professional relocations.
+      </p>
+      <p>✅ <strong>Founded by Justin Ruffin, established in 2025</strong></p>
+      <p>🔋 <em>Powered by San Diego Global Knowledge University</em></p>
+    </section>
+
+    <section id="contact" class="contact-section fade-in">
+      <h2>📞 Ready to Move?</h2>
+      <p>📱 Call us at <strong>(555) 123-4567</strong></p>
+      <p>✉️ Email: <strong>info@tuffstuffmoving.com</strong></p>
+      <a href="/about/" class="home-button">Learn More About Us</a>
+    </section>
+  </div>
+
+  <div class="main-right fade-in">
+    <div class="testimonial-box">
+      <h3>💬 Customer Love</h3>
+      <p id="testimonial-quote">Loading feedback...</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/testimonials.js' %}"></script>
+<script src="{% static 'js/scroll-animations.js' %}"></script>
+{% endblock %}

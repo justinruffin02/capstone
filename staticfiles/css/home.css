@@ -1,0 +1,133 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Layout */
+.banner-only img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.homepage-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.main-content {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.testimonial-sidebar {
+    flex: 1;
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    height: fit-content;
+    position: sticky;
+    top: 2rem;
+}
+
+.testimonial-sidebar h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #007acc;
+    margin-bottom: 1rem;
+}
+
+.testimonial-box {
+    min-height: 150px;
+    font-style: italic;
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Sections */
+.home-header {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: #333;
+}
+
+.home-intro, .home-subintro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 1rem auto;
+    max-width: 800px;
+}
+
+.home-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #218838;
+}
+
+.services-section, .about-section, .contact-section {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.services-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+.services-list li {
+    margin: 0.5rem 0;
+    padding-left: 1rem;
+}
+
+.services-list li a {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.services-list li a:hover {
+    text-decoration: underline;
+}
+
+.contact-section p {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Scroll Fade Animations */
+.scroll-fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-fade.in-view {
+    opacity: 1;
+    transform: none;
+}

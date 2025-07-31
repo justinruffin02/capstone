@@ -1,0 +1,13 @@
+.cards-container {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.card-container {
+    border: solid 1px lightgray;
+    padding: 1rem;
+    width: 350px;
+    text-align: center;
+}
