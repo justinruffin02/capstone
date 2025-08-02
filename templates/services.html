@@ -10,53 +10,141 @@
 {% block content %}
 <div class="main-layout">
   <div class="main-left">
+
+    <!-- Intro -->
     <section class="services-section fade-in">
-      <h2>🏠 Residential Moves</h2>
-      <p>From apartments to multi-story homes, we move families with care, strength, and precision.</p>
+      <h2>🛠 Our Services</h2>
+      <p>
+        Tuff Stuff Moving delivers reliable, disciplined moving support throughout the Dallas–Fort Worth area and beyond.
+        Every move is planned with care, executed with <em>military precision</em>, and finished with respectful service.
+        Explore our core services below or contact us for a custom plan.
+      </p>
+
+      <div class="services-list-grid">
+
+        <!-- Residential -->
+        <article class="service-item card">
+          <h3>🏠 Residential Moves</h3>
+          <p>
+            From studios to multi-story homes, our crew protects floors, doorways, and banisters, pads and wraps furniture,
+            and loads with a clearly labeled system so unpacking is simpler. We can handle stairs, tight turns, and complex
+            apartment logistics with ease.
+          </p>
+        </article>
+
+        <!-- Office -->
+        <article class="service-item card">
+          <h3>🏢 Office Relocations</h3>
+          <p>
+            Minimize downtime with a move that fits your schedule. We pack files & equipment securely, disassemble and
+            reassemble workstation furniture, and coordinate elevator/loading access so teams are productive again fast.
+          </p>
+        </article>
+
+        <!-- Packing -->
+        <article class="service-item card">
+          <h3>📦 Packing & Unpacking</h3>
+          <p>
+            Full-service or partial packing using quality boxes, dish dividers, wardrobe cartons, and custom padding for
+            fragile items. We label by room and contents so everything lands where it belongs—and we can unpack, too.
+          </p>
+        </article>
+
+        <!-- Long Distance -->
+        <article class="service-item card">
+          <h3>🚛 Long-Distance Moving</h3>
+          <p>
+            State-to-state or cross-Texas, we assign a dedicated coordinator, provide clear timelines, and keep your items
+            secured and inventoried. Expect consistent communication from pickup to final placement in your new home.
+          </p>
+        </article>
+
+        <!-- Local -->
+        <article class="service-item card">
+          <h3>📍 Local Moves (DFW)</h3>
+          <p>
+            Fast, affordable moves across DFW with same-day options when available. We know building quirks, traffic windows,
+            and loading policies around the metroplex—so your local move feels easy.
+          </p>
+        </article>
+
+        <!-- Assembly -->
+        <article class="service-item card">
+          <h3>🛋 Furniture Assembly</h3>
+          <p>
+            Beds, sectionals, dining sets, standing desks—our team disassembles for transport and reassembles on arrival,
+            including anchoring and leveling when needed.
+          </p>
+        </article>
+
+      </div>
     </section>
 
-    <section class="services-section fade-in">
-      <h2>🏢 Office Relocations</h2>
-      <p>Minimal downtime, secure file transport, and clean transitions for small businesses and large offices.</p>
+    <!-- Quote CTA -->
+    <section class="quote-cta fade-in">
+      <div class="quote-card">
+        <h3>🎯 Ready to Get a Free Quote?</h3>
+        <p>Tell us about your move and we’ll build a clear, no-obligation estimate.</p>
+        <a href="{% url 'contact' %}" class="btn btn-quote">Get a Free Quote</a>
+      </div>
     </section>
 
-    <section class="services-section fade-in">
-      <h2>📦 Packing & Unpacking</h2>
-      <p>We offer full or partial packing services, using premium materials to protect your belongings.</p>
+    <!-- Special Inquiry CTA -->
+    <section class="quote-cta fade-in">
+      <div class="quote-card special">
+        <h3>🧩 Special Item or Unique Situation?</h3>
+        <p>Have a piano, safe, antiques, or a tricky access path? We’re happy to help—send us details.</p>
+        <a href="{% url 'contact' %}" class="btn btn-special">Start a Special Inquiry</a>
+      </div>
     </section>
 
-    <section class="services-section fade-in">
-      <h2>🚛 Long-Distance Moves</h2>
-      <p>Moving across Texas or the country? We handle the logistics and heavy lifting coast to coast.</p>
+    <!-- FAQ (collapsible, no JS) -->
+    <section class="faq-section fade-in">
+      <h2>❓ Frequently Asked Questions</h2>
+
+      <details class="faq-item card" open>
+        <summary>💰 How is pricing calculated?</summary>
+        <p>Local moves are typically billed hourly by crew size; long-distance moves are based on inventory and mileage.
+           We’ll outline everything up front—no hidden fees.</p>
+      </details>
+
+      <details class="faq-item card">
+        <summary>📅 How far in advance should I book?</summary>
+        <p>1–2 weeks for local moves is great. For long-distance moves and end-of-month dates, book as early as you can.</p>
+      </details>
+
+      <details class="faq-item card">
+        <summary>🧰 Do you bring supplies?</summary>
+        <p>Yes. We bring pads/blankets, stretch wrap, dollies, and basic tools. Packing supplies and specialty crates are available on request.</p>
+      </details>
+
+      <details class="faq-item card">
+        <summary>🛡️ Are you licensed and insured?</summary>
+        <p>Absolutely. Our team is trained, background-checked, and fully insured for your peace of mind.</p>
+      </details>
     </section>
 
-    <section class="services-section fade-in">
-      <h2>📍 Local Moves (DFW)</h2>
-      <p>Fast, affordable service within the Dallas–Fort Worth metroplex with same-day availability.</p>
+    <!-- Map -->
+    <section class="services-map fade-in">
+      <h2>🗺️ Service Area Map</h2>
+      <p>Headquartered in the Fort Worth area and serving the entire DFW metroplex and beyond.</p>
+      <div class="map-frame">
+        <iframe
+          src="https://www.google.com/maps?q=Fort+Worth,+TX&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
     </section>
 
-    <section class="services-section fade-in">
-      <h2>🛠 Furniture Assembly</h2>
-      <p>From IKEA to custom pieces, our team assembles beds, tables, desks, and more on-site.</p>
-    </section>
-
-    <section class="services-section fade-in">
-      <h2>❓ FAQs</h2>
-      <ul class="services-list">
-        <li>📅 <strong>How early should I book?</strong> – We recommend 1–2 weeks in advance for best availability.</li>
-        <li>💳 <strong>Do you accept cards?</strong> – Yes, we accept all major credit/debit cards and digital payments.</li>
-        <li>📦 <strong>Do you provide packing supplies?</strong> – Yes, including boxes, tape, bubble wrap, and blankets.</li>
-        <li>👷 <strong>Are your movers trained?</strong> – Absolutely! Our movers are experienced and background-checked.</li>
-      </ul>
-    </section>
   </div>
 
-  <div class="main-right fade-in">
+  <!-- Sidebar Testimonials -->
+  <aside class="main-right fade-in">
     <div class="testimonial-box">
-      <h3>💬 Client Testimonials</h3>
+      <h3>💬 What Customers Say</h3>
       <p id="testimonial-quote">Loading feedback...</p>
     </div>
-  </div>
+  </aside>
 </div>
 {% endblock %}
 

@@ -1,94 +1,123 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Welcome to Tuff Stuff Moving{% endblock %}
+{% block title %}Tuff Stuff Moving | Serving with Military Precision{% endblock %}
 
 {% block css %}
 <link href="{% static 'css/home.css' %}" rel="stylesheet">
 {% endblock %}
 
-{% block banner %}
-<div class="hero-banner-only"></div>
-{% endblock %}
-
 {% block content %}
+
+<!-- 1) Banner image only (no text overlay) -->
+<div class="hero-banner-only"></div>
+
+<!-- 2) Centered title + quote under the banner -->
+<section class="home-hero-text fade-in">
+  <h1 class="home-title">Tuff Stuff Moving</h1>
+  <p class="home-tagline">🚛 Serving with Military Precision</p>
+  <p class="home-subtagline">
+    Trusted local and long-distance movers. We handle your stuff like it’s our own —
+    strong, reliable, and careful every step of the way.
+  </p>
+  <a href="{% url 'contact' %}" class="home-button">Get a Free Quote</a>
+</section>
+
+<!-- 3) Main body (left content + right testimonials) -->
 <div class="main-layout">
   <div class="main-left">
-    <div class="home-hero-text fade-in">
-      <h1 class="home-header">Tuff Stuff Moving</h1>
-      <p class="home-intro">
-        Your trusted local and long-distance moving experts. We handle your stuff like it’s our own — strong, reliable, and careful every step of the way.
+
+    <!-- Highlights / quick services -->
+    <section class="services-section fade-in">
+      <h2>📦 What We Do</h2>
+      <p>
+        From apartments to office campuses, Tuff Stuff brings disciplined planning, careful packing,
+        and respectful service to every move across the DFW metroplex and beyond.
       </p>
-      <a href="#contact" class="home-button">Get a Free Quote</a>
-    </div>
 
-    <section class="">
-      <h2>🛠 Our Services</h2>
-
-      <div class="cards-container">
-        <a href="/services/" class="card-container">
-          <div>🏠</div>
-          <h2>Residential Moves</h2>
-          <p>From apartments to multi-story homes, we move families with care, strength, and precision.</p>
-        </a>
-
-        <a href="/services/" class="card-container">
-          <div>🏢</div>
-          <h2>Office Relocations</h2>
-          <p>Minimal downtime, secure file transport, and clean transitions for small businesses and large offices.</p>
-        </a>
-
-        <a href="/services/" class="card-container">
-          <div>📦</div>
-          <h2>Packing & Unpacking</h2>
-          <p>We offer full or partial packing services, using premium materials to protect your belongings.</p>
-        </a>
-
-          <a href="/services/" class="card-container">
-          <div>🚛</div>
-          <h2>Long-Distance Moving</h2>
-          <p>Moving across Texas or the country? We handle the logistics and heavy lifting coast to coast.</p>
-        </a>
-
-        <a href="/services/" class="card-container">
-          <div>📍</div>
-          <h2>Local Moves in DFW Area</h2>
-          <p>Fast, affordable service within the Dallas–Fort Worth metroplex with same-day availability.</p>
-        </a>
-
-        <a href="/services/" class="card-container">
-          <div>🛠</div>
-          <h2>Furniture Assembly</h2>
-          <p>From IKEA to custom pieces, our team assembles beds, tables, desks, and more on-site.</p>
-        </a>
-
-        
+      <div class="services-list-grid">
+        <article class="service-item card">
+          <h3>🏠 Residential Moves</h3>
+          <p>Protective padding, labeled loading, and careful placement in your new home—so you can settle quickly.</p>
+        </article>
+        <article class="service-item card">
+          <h3>🏢 Office Relocations</h3>
+          <p>After-hours schedules, workstation assembly, and secure file/equipment handling to keep business moving.</p>
+        </article>
+        <article class="service-item card">
+          <h3>📦 Packing & Unpacking</h3>
+          <p>Full or partial packing with quality supplies, fragile-item care, and room-by-room labeling.</p>
+        </article>
+        <article class="service-item card">
+          <h3>🚛 Long-Distance</h3>
+          <p>Dedicated coordination, clear timelines, and consistent communication from pickup to final placement.</p>
+        </article>
       </div>
     </section>
 
+    <!-- About snapshot -->
     <section class="about-section fade-in">
-      <h2>📘 About Us</h2>
+      <h2>🧭 Why Tuff Stuff?</h2>
       <p>
-        Tuff Stuff Moving is a Texas-born moving company founded on strength, precision, and service. We bring the discipline of military standards into every move, ensuring smart, safe, and professional relocations.
+        Founded by <strong>Justin Ruffin</strong> in <strong>2025</strong>, we blend military-grade discipline with neighborly service.
+        Our crews are trained, background-checked, and insured—focused on safety, speed, and respect.
       </p>
-      <p>✅ <strong>Founded by Justin Ruffin, established in 2025</strong></p>
-      <p>🔋 <em>Powered by San Diego Global Knowledge University</em></p>
+      <ul class="services-list">
+        <li>✅ Clear estimates with no hidden fees</li>
+        <li>✅ On-time arrivals and careful handling</li>
+        <li>✅ Local DFW experts with long-distance reach</li>
+      </ul>
+      <p>🎓 <em>Powered by San Diego Global Knowledge University</em></p>
     </section>
 
-    <section id="contact" class="contact-section fade-in">
-      <h2>📞 Ready to Move?</h2>
-      <p>📱 Call us at <strong>(555) 123-4567</strong></p>
-      <p>✉️ Email: <strong>info@tuffstuffmoving.com</strong></p>
-      <a href="/about/" class="home-button">Learn More About Us</a>
+    <!-- CTAs -->
+    <section class="quote-cta fade-in">
+      <div class="quote-card">
+        <h3>🎯 Ready to Get a Free Quote?</h3>
+        <p>Tell us about your move and we’ll build a clear, no-obligation estimate.</p>
+        <a href="{% url 'contact' %}" class="btn btn-quote">Get a Free Quote</a>
+      </div>
     </section>
+
+    <section class="quote-cta fade-in">
+      <div class="quote-card special">
+        <h3>🧩 Special Item or Access?</h3>
+        <p>Pianos, safes, antiques, or tight spaces—share details and we’ll plan the safest approach.</p>
+        <a href="{% url 'contact' %}" class="btn btn-special">Start a Special Inquiry</a>
+      </div>
+    </section>
+
+    <!-- Quick FAQ -->
+    <section class="faq-section fade-in">
+      <h2>❓ Quick Answers</h2>
+      <details class="faq-item card" open>
+        <summary>How soon should I book?</summary>
+        <p>1–2 weeks ahead for local moves is ideal; long-distance or month-end dates should be booked earlier.</p>
+      </details>
+      <details class="faq-item card">
+        <summary>Do you supply packing materials?</summary>
+        <p>Yes—boxes, tape, wrap, wardrobe cartons, and specialty protection upon request.</p>
+      </details>
+    </section>
+
+    <!-- Map -->
+    <section class="services-map fade-in">
+      <h2>🗺️ Our Home Base</h2>
+      <p>Serving the Dallas–Fort Worth area and beyond.</p>
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps?q=Fort+Worth,+TX&output=embed" loading="lazy"></iframe>
+      </div>
+    </section>
+
   </div>
 
-  <div class="main-right fade-in">
+  <!-- Testimonials sidebar -->
+  <aside class="main-right fade-in">
     <div class="testimonial-box">
       <h3>💬 Customer Love</h3>
       <p id="testimonial-quote">Loading feedback...</p>
     </div>
-  </div>
+  </aside>
 </div>
 {% endblock %}
 

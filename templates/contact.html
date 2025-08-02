@@ -1,54 +1,67 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}About Us | Tuff Stuff Moving{% endblock %}
+{% block title %}Contact Us | Tuff Stuff Moving{% endblock %}
 
 {% block css %}
-<link href="{% static 'css/contact.css' %}" rel="stylesheet">
+<link href="{% static 'css/home.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
-    <h1>Contact page</h1>
-
-    <div class="cards-container">
-        <div class="card-container">
-            <div>🏠</div>
-            <h2>Benefit #1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, officiis.</p>
+<section class="contact-wrapper fade-in">
+  <div class="contact-card">
+    <div class="contact-left">
+      <h2>📋 Get a Free Quote</h2>
+      <p>Please fill out the form below and we’ll be in touch shortly.</p>
+      <form class="quote-form" novalidate>
+        <div class="form-grid">
+          <input type="text" placeholder="👤 Full Name" required>
+          <input type="tel" placeholder="📱 Phone Number">
+          <input type="email" placeholder="📧 Email Address" required>
+          <input type="date" placeholder="📆 Move Date">
+          <input type="text" placeholder="📍 Moving From (Address)">
+          <input type="text" placeholder="🏡 Moving To (Address)">
         </div>
 
-        <div class="card-container">
-            <div>🏠</div>
-            <h2>Benefit #2</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, officiis.</p>
-        </div>
+        <select>
+          <option>🚚 Move Type (Select one)</option>
+          <option>Residential</option>
+          <option>Office</option>
+          <option>Long Distance</option>
+          <option>Packing Only</option>
+        </select>
 
-        <div class="card-container">
-            <div>🏠</div>
-            <h2>Benefit #3</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, officiis.</p>
-        </div> 
+        <textarea rows="4" placeholder="📝 Additional details (stairs, elevators, furniture size, special care items...)"></textarea>
 
-        <div class="card-container">
-            <div>🏠</div>
-            <h2>Benefit #4</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, officiis.</p>
-        </div>
-
-        <div class="card-container">
-            <div>🏠</div>
-            <h2>Benefit 51</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, officiis.</p>
-        </div>
-
-        <div class="card-container">
-            <div>🏠</div>
-            <h2>Benefit #6</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, officiis.</p>
-        </div>
+        <button type="submit" class="home-button btn-full">Submit Request</button>
+        <p class="form-note">Note: This form is visual-only and does not submit data yet.</p>
+      </form>
     </div>
 
+    <div class="contact-right">
+      <div class="info-box">
+        <h3>📞 Contact Information</h3>
+        <ul>
+          <li><strong>Address:</strong> 4201 City Point Drive w, North Richland Hills, TX</li>
+          <li><strong>Phone:</strong> (555) 123-4567</li>
+          <li><strong>Email:</strong> info@tuffstuffmoving.com</li>
+          <li><strong>Hours:</strong> Mon–Sat, 8am–6pm</li>
+        </ul>
+
+        <div class="map-frame">
+          <iframe
+            src="https://www.google.com/maps?q=Fort+Worth,+TX&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock %}
 
 {% block scripts %}
+<script src="{% static 'js/scroll-animations.js' %}"></script>
 {% endblock %}
+

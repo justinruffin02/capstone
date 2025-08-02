@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}About Us | Tuff Stuff Moving{% endblock %}
+{% block title %}About Tuff Stuff Moving{% endblock %}
 
 {% block css %}
 <link href="{% static 'css/home.css' %}" rel="stylesheet">
@@ -10,34 +10,71 @@
 {% block content %}
 <div class="main-layout">
   <div class="main-left">
+
+    <!-- Who We Are -->
     <section class="about-section fade-in">
-      <h2>🏋️‍♂️ About Tuff Stuff Moving</h2>
+      <h2>🏋️‍♂️ Who We Are</h2>
       <p>
-        Founded in 2025 by <strong>Justin Ruffin</strong>, Tuff Stuff Moving was built on the principles of strength, service, and military precision. We're proud to serve the Dallas–Fort Worth area and beyond.
+        Tuff Stuff Moving was founded in <strong>2025</strong> by <strong>Justin Ruffin</strong> to bring military-grade discipline,
+        planning, and care to residential and commercial moves. We believe a great move feels calm, predictable, and
+        respectful—from first box to last placement.
       </p>
-      <p>
-        Our mission is to provide strong, reliable, and careful moving services to individuals, families, and businesses. With a team trained in careful packing, strategic lifting, and logistical planning, we treat your stuff like it's our own.
-      </p>
-      <p>🎓 Powered by San Diego Global Knowledge University.</p>
+      <ul class="services-list">
+        <li>✅ Trained, background-checked, and insured crews</li>
+        <li>✅ Careful packing, protective padding, and labeled loading</li>
+        <li>✅ Clear communication and on-time performance</li>
+      </ul>
+      <p>🎓 <em>Powered by San Diego Global Knowledge University</em></p>
     </section>
 
+    <!-- Mission & Values -->
     <section class="about-section fade-in">
-      <h2>💼 Why Choose Us?</h2>
+      <h2>🎯 Mission & Values</h2>
+      <p>
+        Our mission is simple: treat every client’s move like our own—strong, reliable, and careful every step of the way.
+        We value respect, readiness, and results.
+      </p>
       <ul class="services-list">
-        <li>✅ Military-grade efficiency</li>
-        <li>✅ Local & long-distance coverage</li>
-        <li>✅ Competitive pricing with no hidden fees</li>
-        <li>✅ Friendly, professional movers</li>
+        <li>🛡️ Safety first—for people, property, and pets</li>
+        <li>🧭 Integrity—no hidden fees or last-minute surprises</li>
+        <li>⏱️ Efficiency—smart prep and smooth execution</li>
       </ul>
+    </section>
+
+    <!-- CTAs -->
+    <section class="quote-cta fade-in">
+      <div class="quote-card">
+        <h3>🎯 Ready to Get a Free Quote?</h3>
+        <p>Share your details and we’ll build a clear estimate.</p>
+        <a href="{% url 'contact' %}" class="btn btn-quote">Get a Free Quote</a>
+      </div>
+    </section>
+
+    <section class="quote-cta fade-in">
+      <div class="quote-card special">
+        <h3>🧩 Special Item or Unique Situation?</h3>
+        <p>Pianos, safes, antiques, or limited access—send us your scenario, and we’ll plan it right.</p>
+        <a href="{% url 'contact' %}" class="btn btn-special">Start a Special Inquiry</a>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section class="services-map fade-in">
+      <h2>🗺️ Where We Operate</h2>
+      <p>Based in the Fort Worth area, serving all of DFW and long-distance routes.</p>
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps?q=Fort+Worth,+TX&output=embed" loading="lazy"></iframe>
+      </div>
     </section>
   </div>
 
-  <div class="main-right fade-in">
+  <!-- Sidebar Testimonials -->
+  <aside class="main-right fade-in">
     <div class="testimonial-box">
       <h3>💬 What Customers Say</h3>
       <p id="testimonial-quote">Loading feedback...</p>
     </div>
-  </div>
+  </aside>
 </div>
 {% endblock %}
 

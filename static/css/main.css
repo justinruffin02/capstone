@@ -9,7 +9,7 @@ html, body {
 
 /* Navigation Bar */
 nav {
-    background-color: #bebebf;
+    background-color: #567134;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -105,3 +105,60 @@ footer, footer p {
     padding: 1rem;
     font-size: 0.9rem;
 }
+
+/* --- Footer structure --- */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+
+.site-footer { background: #0f1724; color: #e6ebf2; margin-top: 2.5rem; }
+.site-footer a { color: #dfe7f3; text-decoration: none; }
+.site-footer a:hover { color: #8ec5ff; }
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+  gap: 2rem;
+  padding: 2.25rem 0;
+}
+
+.footer-col h4 { margin: 0 0 .75rem; font-size: 1rem; color: #ffffff; }
+.footer-col p, .footer-list li { color: #c7cfdb; }
+
+.footer-logo { display: flex; align-items: center; gap: .5rem; font-weight: 800; }
+.footer-logo .brand-mark { font-size: 1.2rem; }
+.footer-logo .brand-name { font-size: 1.05rem; }
+
+.footer-list { list-style: none; padding: 0; margin: 0; }
+.footer-list li { margin: .4rem 0; }
+
+/* Social icons */
+.socials { display: flex; gap: .6rem; margin-top: .75rem; padding: 0; list-style: none; }
+.socials a { color: #dfe7f3; display: inline-flex; }
+.socials a:hover { color: #8ec5ff; }
+
+/* Map */
+.footer-map iframe {
+  width: 100%;
+  height: 170px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+/* Bottom strip */
+.footer-bottom { border-top: 1px solid #202a3d; background: #0c1220; }
+.footer-bottom-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .9rem 0; gap: 1rem;
+}
+.footer-bottom p { margin: 0; color: #b6c2d1; font-size: .95rem; }
+.legal-links { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
+
+/* Responsive */
+@media (max-width: 1000px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px)  {
+  .footer-top { grid-template-columns: 1fr; }
+  .footer-bottom-inner { flex-direction: column; align-items: flex-start; }
+}
+
+/* Override earlier rule that styled footer and <p> the same */
+footer, footer p { background: transparent; padding: 0; color: inherit; }
